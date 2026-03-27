@@ -6,5 +6,10 @@ Allows you to override the biome skins of villagers. For example make every vill
 ### Supported Platforms
 Villager Override currently support client-side for both fabric and neoforge. It has only been tested on 1.21.11, but it should work on everything after 1.21.6.
 
+### Dependencies
+This mod _requires_ both [YACL](https://modrinth.com/mod/yacl) and [Architectury API](https://modrinth.com/mod/architectury-api) to work. 
+
+[Mod Menu](https://modrinth.com/mod/modmenu) is also strongly recommended on fabric as it is what allows you to configure the mod. 
+
 ## Configuration
 The biome to override with can be configured by finding the config in your mod loaders mod list.
