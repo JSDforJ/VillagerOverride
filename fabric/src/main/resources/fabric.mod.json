@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "villageroverride",
+  "version": "${version}+fabric",
+  "name": "Villager Override",
+  "description": "Allows you to override the biome skins of villagers. For example make every villager looks like a jungle villager.",
+  "authors": [
+    "JSDfJ"
+  ],
+  "contact": {
+    "homepage": ""
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/villageroverride/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "dk.jsdfj.villageroverride.fabric.VillageroverrideFabric"
+    ],
+    "client": [
+      "dk.jsdfj.villageroverride.fabric.client.VillageroverrideFabricClient"
+    ],
+    "modmenu": [ "dk.jsdfj.villageroverride.fabric.VillagerModMenuApiImpl" ]
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.modrinth": "https://modrinth.com/mod/villager-override",
+        "GitHub": "https://github.com/JSDforJ/VillagerOverride"
+      },
+      "update_checker": true
+    }
+  },
+  "mixins": [
+    "villageroverride.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.18.5",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "yet_another_config_lib_v3": ">=3.8.2+1.21.11",
+    "architectury": ">=19.0.1",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "modmenu": "*"
+  }
+}
