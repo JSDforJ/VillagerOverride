@@ -4,7 +4,6 @@ import com.google.gson.GsonBuilder;
 import dev.isxander.yacl3.config.v2.api.ConfigClassHandler;
 import dev.isxander.yacl3.config.v2.api.SerialEntry;
 import dev.isxander.yacl3.config.v2.api.serializer.GsonConfigSerializerBuilder;
-import net.fabricmc.loader.api.FabricLoader;
 
 public class VillagerOverrideConfig {
     public static ConfigClassHandler<VillagerOverrideConfig> HANDLER = ConfigClassHandler.createBuilder(VillagerOverrideConfig.class)
