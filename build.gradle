@@ -2,6 +2,7 @@ plugins {
     id 'dev.architectury.loom' version '1.14-SNAPSHOT' apply false
     id 'architectury-plugin' version '3.4-SNAPSHOT'
     id 'com.github.johnrengelman.shadow' version '8.1.1' apply false
+    id 'java'
 }
 
 architectury {
@@ -19,9 +20,12 @@ subprojects {
     apply plugin: 'architectury-plugin'
     apply plugin: 'maven-publish'
 
-    base {
-        // Set up a suffixed format for the mod jar names, e.g. `example-fabric`.
-        archivesName = "$rootProject.archives_name-$project.name"
+    remapJar {
+        archiveFileName.set("VillagerOverride-${rootProject.version}+${project.name}.jar")
+    }
+
+    remapSourcesJar {
+        archiveFileName.set("VillagerOverride-${rootProject.version}+${project.name}-sources.jar")
     }
 
     repositories {
