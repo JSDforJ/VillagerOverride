@@ -1,7 +1,8 @@
 modLoader = "javafml"
 loaderVersion = "[2,)"
-#issueTrackerURL = ""
 license = "LGPLv3"
+issueTrackerURL = "https://github.com/JSDforJ/VillagerOverride/issues/new"
+clientSideOnly = true
 
 [[mods]]
 modId = "villageroverride"
@@ -12,6 +13,7 @@ description = '''
 Allows you to override the biome skins of villagers. For example make every villager looks like a jungle villager.
 '''
 logoFile = "META-INF/assets/villageroverride/icon.png"
+updateJSONURL = "https://raw.githubusercontent.com/JSDforJ/VillagerOverride/refs/heads/master/neoforge-update.json"
 
 [[dependencies.villageroverride]]
 modId = "neoforge"
