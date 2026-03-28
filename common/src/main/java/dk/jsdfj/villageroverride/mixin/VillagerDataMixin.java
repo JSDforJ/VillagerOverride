@@ -19,7 +19,7 @@ public class VillagerDataMixin {
             cancellable = true
     )
     private void forceVillagerType(CallbackInfoReturnable<Holder<VillagerType>> cir) {
-        if (Villageroverride.villagerTypeOption == VillagerTypes.BIOME) return;
-        cir.setReturnValue(BuiltInRegistries.VILLAGER_TYPE.getOrThrow(Villageroverride.villagerTypeOption.type));
+        if (Villageroverride.CONFIG.type == VillagerTypes.BIOME) return;
+        cir.setReturnValue(BuiltInRegistries.VILLAGER_TYPE.getOrThrow(Villageroverride.CONFIG.type.type));
     }
 }

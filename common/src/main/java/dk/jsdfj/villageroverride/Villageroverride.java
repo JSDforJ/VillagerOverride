@@ -2,14 +2,12 @@ package dk.jsdfj.villageroverride;
 
 import dev.isxander.yacl3.api.*;
 import dev.isxander.yacl3.api.controller.EnumControllerBuilder;
+import dk.jsdfj.villageroverride.platform.CommonPlatform;
 import net.minecraft.network.chat.Component;
 
 public final class Villageroverride {
     public static final String MOD_ID = "villageroverride";
 
-    public static VillagerTypes villagerTypeOption = VillagerTypes.BIOME;
-
-    public static final String CONFIG_FILE_NAME = "villageroverride.yml";
     private static YetAnotherConfigLib.Builder YACLConfig;
     public static CommonPlatform platform;
 
@@ -17,6 +15,8 @@ public final class Villageroverride {
 
     public static void init(CommonPlatform platform) {
         Villageroverride.platform = platform;
+        VillagerOverrideConfig.HANDLER.load();
+        CONFIG = VillagerOverrideConfig.HANDLER.instance();
         YACLConfig = YetAnotherConfigLib.createBuilder()
                 .title(Component.literal("Used for narration. Could be used to render a title in the future."))
                 .category(ConfigCategory.createBuilder()
@@ -29,8 +29,11 @@ public final class Villageroverride {
                                         .enumClass(VillagerTypes.class))
                                 .binding(
                                         VillagerTypes.BIOME, // the default value
-                                        () -> villagerTypeOption, // a getter to get the current value from
-                                        newVal -> villagerTypeOption = newVal
+                                        () -> CONFIG.type, // a getter to get the current value from
+                                        newVal -> {
+                                            CONFIG.type = newVal;
+                                            VillagerOverrideConfig.HANDLER.save();
+                                        }
                                 )
                                 .build())
                         .build());
