@@ -6,7 +6,7 @@ clientSideOnly = true
 
 [[mods]]
 modId = "villageroverride"
-version = "${version}+neoforge"
+version = "${version}"
 displayName = "Villager Override"
 authors = "JSDfJ"
 description = '''
