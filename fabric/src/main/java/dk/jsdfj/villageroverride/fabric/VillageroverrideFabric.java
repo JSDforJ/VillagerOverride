@@ -1,6 +1,7 @@
 package dk.jsdfj.villageroverride.fabric;
 
 import dk.jsdfj.villageroverride.Villageroverride;
+import dk.jsdfj.villageroverride.fabric.platform.FabricPlatform;
 import net.fabricmc.api.ModInitializer;
 
 public final class VillageroverrideFabric implements ModInitializer {
@@ -11,6 +12,6 @@ public final class VillageroverrideFabric implements ModInitializer {
         // Proceed with mild caution.
 
         // Run our common setup.
-        Villageroverride.init();
+        Villageroverride.init(new FabricPlatform());
     }
 }

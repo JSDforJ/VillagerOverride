@@ -1,6 +1,7 @@
 package dk.jsdfj.villageroverride.neoforge;
 
 import dk.jsdfj.villageroverride.Villageroverride;
+import dk.jsdfj.villageroverride.neoforge.platform.NeoforgePlatform;
 import net.neoforged.fml.ModLoadingContext;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
@@ -9,7 +10,7 @@ import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 public final class VillageroverrideNeoForge {
     public VillageroverrideNeoForge() {
         // Run our common setup.
-        Villageroverride.init();
+        Villageroverride.init(new NeoforgePlatform());
 
         ModLoadingContext.get().registerExtensionPoint(
                 IConfigScreenFactory.class,

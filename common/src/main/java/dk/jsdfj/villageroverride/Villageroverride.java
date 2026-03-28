@@ -11,8 +11,12 @@ public final class Villageroverride {
 
     public static final String CONFIG_FILE_NAME = "villageroverride.yml";
     private static YetAnotherConfigLib.Builder YACLConfig;
+    public static CommonPlatform platform;
 
-    public static void init() {
+    public static VillagerOverrideConfig CONFIG;
+
+    public static void init(CommonPlatform platform) {
+        Villageroverride.platform = platform;
         YACLConfig = YetAnotherConfigLib.createBuilder()
                 .title(Component.literal("Used for narration. Could be used to render a title in the future."))
                 .category(ConfigCategory.createBuilder()
