@@ -1,0 +1,11 @@
+{
+    "homepage": "https://modrinth.com/mod/villager-override",
+    "1.21.11": {
+        "1.1.0": "Add persistent config", 
+        "1.0.0": "Initial Release", 
+    },
+    "promos": {
+        "1.21.11-latest": "1.1.0",
+        "1.21.11-recommended": "1.1.0",
+    }
+}
