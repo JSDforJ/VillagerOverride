@@ -15,3 +15,8 @@ This mod _requires_ both [YACL](https://modrinth.com/mod/yacl) and [Architectury
 
 ## Configuration
 The biome to override with can be configured by finding the config in your mod loaders mod list.
+
+## Roadmap
+- Move to TOML configs
+- Integrate Neoforge Config API
+- Server-side config override
